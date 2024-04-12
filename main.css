@@ -1,0 +1,119 @@
+/* CUSTOM FONTS */
+@font-face {
+    font-family: SAO;
+    src: url(./assets/SAOFont/SAOUI-Regular.otf);
+  }
+
+/* STYLING */
+body,p,h1,h2,h3,h4,a,div,img,video,source {margin: 0;}
+#Title {color: rgb(89, 218, 223);font-size: 60px;background: -webkit-linear-gradient(rgb(89, 218, 223),white, rgb(89, 218, 223));-webkit-background-clip: text;-webkit-text-fill-color: transparent;}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    position:fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+header table{
+    background-color: white;
+}
+.gradientbar {
+    background: linear-gradient(to right, cyan ,rgb(0, 153, 255), rgb(204, 58, 204));
+}
+header button {
+    height: 50px;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    font-weight: 800;
+    font-family: SAO;
+    font-size: 20px;
+    color: rgb(0, 195, 255);
+    transition: 0.5s;
+}
+header button:hover {
+    color: red;
+    transition: 0.5s;
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#myVideo {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: SAO;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+}
+
+.GradientFader {
+    position: absolute;
+    top: 95%;
+    width: 100%;
+    z-index: 1;
+}
+
+.scroll-content {
+    background-color: rgb(0, 0, 0);
+    margin-top: 100vh; /* Adjust this value based on the height of your background video */
+}
+
+table {color: white;}
+.scroll-content table tr {background-color: rgb(14, 14, 14);}
+.scroll-content table tr:nth-child(even) {
+    background-color: rgb(29, 28, 28);
+}
+.BodyContent {
+    border: none !important;
+    border-collapse: collapse;
+}
+
+#MuteToggleBtn {
+    position: absolute;
+    left: 0;
+}
+
+footer {
+    background-color: rgb(43, 43, 43);
+    padding: 15px;
+}
+.FooterContent {
+    background: url('./assets/NoticeBox1.png') no-repeat;
+    /* background-size: 55% 100%; */
+    background-size: 55% 100%;
+    background-position: center;
+    padding-bottom: 10px;
+    color: white;
+}
+.FooterCat {
+    display: inline-block;
+    padding: 5px;
+    vertical-align: top;
+}
+.FooterCat h2 {
+    font-family: SAO;
+}
