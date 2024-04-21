@@ -37,6 +37,16 @@
         <p>An Upcoming Sword art online themed modded minecraft server</p>
         
         <!-- <div style="margin-top: 15px;"><p>server.ip</p></div> -->
+        <a href="https://discord.gg/YAhmUdp3VX">
+            <table style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td style="max-width:25px;"><img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6cc3c481a15a141738_icon_clyde_white_RGB.png" width="25px"></td>
+                        <td>Join our Discord | <span id="discordmembercount">??</span> online</td>
+                    </tr>
+                </tbody>
+            </table>
+        </a>
     </div>
     <center><img style="position: absolute;bottom: 0;filter:brightness(200%);" src="./assets/arrow.gif" width="50px"></center>
     <div class="GradientFader">
@@ -114,6 +124,31 @@
         ytIcon.addEventListener("mouseout", function() {
             this.src = "./assets/youtube.webp";
         });
+
+        function viewDiscordStatus() {
+    $.ajax({
+        url: "https://discord.com/api/guilds/1080522252753326120/embed.json",
+        success: function (data) {
+            let presence_count = data.presence_count;
+            updateDiscordStatus(presence_count);
+        },
+        error: function () {},
+        timeout: 300000,
+    });
+}
+
+let discordStatusDiv = $(".discordmembercount");
+function updateDiscordStatus(presence_count) {
+    
+    discordStatusDiv.empty();
+    if (presence_count !== 1) {
+        discordStatusDiv.html("presence_count);
+    } else {
+        discordStatusDiv.html(presence_count);
+    }
+}
+viewDiscordStatus();
+
         </script>
 </body>
 </html>
