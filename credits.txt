@@ -1,7 +1,0 @@
-Many thanks to the following people for making this project possible
-
-ScrapBlox - Owner
-Nazu - Manager/Developer
-
-And to the previous maintainers of the project Shy and Tendaar
-Thank you!
