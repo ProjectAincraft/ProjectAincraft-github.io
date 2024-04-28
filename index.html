@@ -52,7 +52,7 @@
     </div>
     <center><img style="position: absolute;bottom: 0;filter:brightness(200%);" src="./assets/arrow.gif" width="50px"></center>
     <div class="GradientFader">
-        <button id="MuteToggleBtn" onclick="toggleVideoMute()">🔊</button>
+        <button id="MuteToggleBtn" onclick="toggleVideoMute()">🔇</button>
     </div>
     <div class="scroll-content">
         <table style="width: 100%;" class="BodyContent">
@@ -61,12 +61,12 @@
                     <h2>How do I join the server?</h2>
                     <p>The server is not released yet.  We are still in the process of creating it.  Feel free to join our <a href="https://discord.gg/YAhmUdp3VX">Discord</a> and help contribute to the server.</p>
                 </td>
-                <td>
+                <td id="ImageBox">
                     <img src="./assets/KIRITO.webp" width="250px" align="right">
                 </td>
             </tr>
             <tr>
-                <td>
+                <td id="ImageBox">
                     <img src="./assets/1024x1180.png" width="250px">
                 </td>
                 <td align="right">
@@ -80,6 +80,7 @@
         <footer>
                 <a href="https://x.com/projectaincraft" target="new"><img id="xIcon" src="./assets/xcorp.png" width="25px"></a>
                 <a href="https://youtube.com/@project_aincraft" target="new"><img id="ytIcon" src="./assets/youtube.webp" width="25px"></a>
+                <a href="mailto:scrapblox@gmail.com?subject=[Aincraft Contact]" target="new"><img id="mailIcon" src="./assets/mail.png" width="25px"></a>
             <div class="FooterContent">
                 <!-- <div class="FooterCat">
                     <h2>About Us</h2>
@@ -103,15 +104,16 @@
         function toggleVideoMute() {
           if (video.muted == true) {
             video.muted = false;
-            btn.innerHTML = "🔇";
+            btn.innerHTML = "🔊";
           } else {
             video.muted = true;
-            btn.innerHTML = "🔊";
+            btn.innerHTML = "🔇";
           }
         }
 
         const xIcon = document.getElementById("xIcon");
         const ytIcon = document.getElementById("ytIcon");
+        const mailIcon = document.getElementById("mailIcon");
 
         xIcon.addEventListener("mouseover", function() {
             this.src = "./assets/Bxcorp.png";
@@ -119,7 +121,13 @@
         xIcon.addEventListener("mouseout", function() {
             this.src = "./assets/xcorp.png";
         });
+        mailIcon.addEventListener("mouseout", function() {
+            this.src = "./assets/mail.png";
+        });
 
+        mailIcon.addEventListener("mouseover", function() {
+            this.src = "./assets/Bmail.png";
+        });
         ytIcon.addEventListener("mouseover", function() {
             this.src = "./assets/Byoutube.webp";
         });

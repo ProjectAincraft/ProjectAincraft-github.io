@@ -117,3 +117,16 @@ footer {
 .FooterCat h2 {
     font-family: SAO;
 }
+
+/* RESPONSIVE LAYOUT */
+
+@media only screen and (max-width: 816px) {
+    
+    .BodyContent tr {
+        height: 170px;
+    }
+    #ImageBox img {width: 150px;}
+    .content {
+        width: 90%;
+    }
+}
